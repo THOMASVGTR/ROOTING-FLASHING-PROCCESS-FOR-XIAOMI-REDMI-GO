@@ -62,7 +62,7 @@ https://sourceforge.net/projects/tiare/files/Magisk/
 => Now press home button in twrp then select Reboot/restart option after that press reboot to system and you are done.
 
 
-# INTERESTED in CUSTOM AFTER ROOTING?
+# INTERESTED in CUSTOM ROM AFTER ROOTING?
 
 IT is very easy.
 
