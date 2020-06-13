@@ -140,17 +140,38 @@ Download it now. PLACE this software exe file to C: drive's adb folder.
 
 => After passing 4 to 5 minutes and your phone still booting or stuck at the logo, then you have to go to the recovery mode by pressing power button and volume up key.
 
-=> Now you have to flash 2 (two) more zips. 1)Permissiver_v5.zip 
+=> Now you have to flash 3 (three) more zips. 1)Permissiver_v5.zip 
                                             2)decrypt.zip
                                             3)Boot animation replacer.zip
 
-# Permissiver.zip
+# Permissiver.zip        [Mandatory]
+Link: 
+
+=>   https://github.com/THOMASVGTR/All-Pre-Build-Zipped-MODULE-Files/blob/master/%5BTWRP%5D%20Permissiver_v5.zip
+
+
+# Decrypt.zip           [Mandatory]
+Link:
+
+=>  https://github.com/THOMASVGTR/All-Pre-Build-Zipped-MODULE-Files/blob/master/%5BTWRP%5D%20Decrypt.zip
+
+# Boot Animation Replacer.zip       [Mandatory]
+LINK 1: (TWRP)
+
+Must have to flash it via [TWRP] (RECOMMENDED), after installing CUSTOM ROM for fixing BOOT ANIMATION related lag issues.
+
+=>  https://github.com/THOMASVGTR/All-Pre-Build-Zipped-MODULE-Files/blob/master/%5BTWRP%5D%20BOOT%20ANIMATION%20REMOVER%20AND%20REPLACER.zip
+
+LINK 2: (MAGISK)
+
+Flash it via magisk manager after you booted correctly on custom rom. 
+OR appropriate for those users who upgrade their custom rom with just reflashing the system images. 
+
+=>  https://github.com/THOMASVGTR/All-Pre-Build-Zipped-MODULE-Files/blob/master/%5BMagisk%5D%20Boot%20Animation%20replacer.zip
 
 
 
-# Decrypt.zip
+Thank YOU SO MUCH.
 
-
-# Boot Animation Replacer.zip
-
+...ENJOY...
 
