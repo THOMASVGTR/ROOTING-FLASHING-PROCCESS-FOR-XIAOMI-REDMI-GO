@@ -20,7 +20,7 @@ Do everything at your own risk.
 
 
 # HOW TO UNLOCK BOOTLOAER FOR REDMI GO DEVICES:
-=> ADB DRIVER HAVE TO BE INSTALLED ON YOUR COMPUTER. Install that from the link which I have given or requirements.
+=> ADB DRIVER HAVE TO BE INSTALLED ON YOUR COMPUTER. Install that from the link which I have given on requirements.
 
 => BOOT your Redmi go phone to FASTBOOT mode by holding power button and volume down button at the same time until it boots into the 
     FASTBOOT mode.
