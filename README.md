@@ -3,7 +3,7 @@ This process will tell you how you can root your Xiaomi Redmi Go phone easily.
 AUTHOR IS NOT LIABLE FOR YOUR DEVICE BRICKING OR SOMETHING IF HAPPENS.
 Do everything at your own risk.
 
-[YOUR VALUABLE DATA WILL GOING TO BE VANISHED. SO BACKUP EVERYTHING TO YOUR COMPUTER(RECOMMENDED) OR SD CARD].
+[YOUR VALUABLE DATA WILL GOING TO BE VANISHED. SO BACKUP EVERYTHING TO YOUR COMPUTER (RECOMMENDED) OR SD CARD].
 
 # REQUIREMENTS:
 1) A PC or LAPTOP WITH WINDOWS 10(RECOMMENDED) or UBUNTU LINUX or LINUX MINT or MACOS.
@@ -11,7 +11,7 @@ Do everything at your own risk.
 2) UNIVERSAL ADB DRIVER INSTALLER (Download the appropriate version for your OS)
   LINK: https://www.xda-developers.com/install-adb-windows-macos-linux/
   
-3)AN ANDROID PHONE with ANDROID USB DEBUGGING ENABLED. HOW to enable? 
+3) AN ANDROID PHONE with ANDROID USB DEBUGGING ENABLED. HOW to enable? 
   Follow the previous link, every instruction is given there.
   
 4) NEED SOME BRAINS from your head.
