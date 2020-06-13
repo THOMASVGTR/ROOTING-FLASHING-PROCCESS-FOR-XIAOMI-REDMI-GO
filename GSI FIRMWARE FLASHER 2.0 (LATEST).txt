@@ -1,0 +1,680 @@
+@ECHO OFF
+REM BFCPEOPTIONSTART
+REM Advanced BAT to EXE Converter www.BatToExeConverter.com
+REM BFCPEEXE=
+REM BFCPEICON=
+REM BFCPEICONINDEX=0
+REM BFCPEEMBEDDISPLAY=0
+REM BFCPEEMBEDDELETE=1
+REM BFCPEADMINEXE=0
+REM BFCPEINVISEXE=0
+REM BFCPEVERINCLUDE=0
+REM BFCPEVERVERSION=1.0.0.0
+REM BFCPEVERPRODUCT=Product Name
+REM BFCPEVERDESC=Product Description
+REM BFCPEVERCOMPANY=Your Company
+REM BFCPEVERCOPYRIGHT=Copyright Info
+REM BFCPEOPTIONEND
+@ECHO ON
+
+mode con: cols=110 lines=30
+:RESTART
+
+@ECHO OFF
+
+
+@ECHO OFF
+
+TITLE --#####  ALL IN ONE CLICK FLASH TOOL [VERSION 2.0]-[FINAL] BY ($THOMASV$)  ######--
+
+timeout /T 3 /NOBREAK > nul
+color 07
+ECHO ################### ALL IN ONE SIMPLE FLASH TOOL [VERSION 2.0] BY ($THOMASV$) ############################
+ECHO ############### THIS TOOL IS FOR DEVELOPMENT PERPOSE ONLY. NOT FOR GENERAL USERS. ########################
+ECHO #################### THIS TOOL IS FOR THOSE PEOPLE WHO KNOWS WHAT THEY DOING. ############################
+ECHO THIS TOOL IS COMPATIBLE ONLY WITH PROJECT TREBLE DEVICES. 
+timeout /T 3 /NOBREAK > nul
+color 03
+ECHO ####COPYRIGHT@2020#####  ALL IN ONE SIMPLE FLASH TOOL [VERSION 2.0] BY ($THOMASV$) ####COPYRIGHT@2020#####
+ECHO   ------------------------------------------------------------------------------------------------------
+
+
+ECHO LOADING FILES. CODING IS A VERY HARD WORK. PLEASE RESPECT OTHERS PRIVACY.
+timeout /T 5 /NOBREAK > nul
+
+
+cls
+
+ECHO -----------------------------------(YOUR MACHINE'S HARDWARE INFO)-------------------------------------
+    wmic cpu get name
+	systeminfo | findstr /c:"OS Name"
+	systeminfo | findstr /c:"OS Version"
+	systeminfo | findstr /c:"System Type"
+	systeminfo | findstr /c:"Physical"
+	systeminfo | findstr /c:"Virtual"
+
+
+ECHO ------------------------------------------------------------------------------------------------------
+ECHO 		!!! READY !!! IF YOU READY THEN PRESS ANY KEY TO CONTINUE OR CLOSE THIS PROGRAM.
+ECHO ##############################USE THIS TOOL AT YOUR OWN RISK.#########################################
+
+
+@ECHO OFF
+
+ECHO ------------------------------------------------------------------------------------------------------
+ECHO CONNECT YOUR PHONE AND GO TO THE BOOTLOADER BY PRESSING POWER BUTTON AND VOLUME DOWN KEY OR SOMETHING ELSE.
+ECHO BOOTLOADER SHOULD HAVE TO BE UNLOCKED.
+
+
+
+color 08
+ECHO DO YOU WANT TO READ INSTRUCTIONS MANUAL?[Y/N]
+choice /c YN
+
+if %errorlevel%==2 goto OPTIONS
+if %errorlevel%==1 goto INSTRUCTIONS
+
+PAUSE
+
+:OPTIONS
+CLS
+ECHO 1. --------------------------------------?FLASH ALL?---------------------------------------
+ECHO 2. -----------------------------------?FLASH (ONE BY ONE)?---------------------------------
+ECHO 3.-------------------------------------?REBOOT OPTIONS?------------------------------------
+ECHO 4.-----------------------------------?QUIT/EXIT PROGRAM?-----------------------------------
+
+CHOICE /N /C:1234 /M "CHOOSE AN OPTION FROM (1 TO 4)"%1
+IF ERRORLEVEL ==4 goto END
+IF ERRORLEVEL ==3 goto START
+IF ERRORLEVEL ==2 goto ONEBYONE
+IF ERRORLEVEL ==1 goto BEGIN
+
+
+ECHO.
+goto OPTIONS
+
+:BEGIN
+adb reboot bootloader
+ECHO START FLASHING ?
+PAUSE
+
+ECHO ------------------------------------------------------------------------------------------------------
+ECHO Let's FLASH
+ECHO CHECKING ADB DEVICES
+adb devices
+ECHO ------------------------------------------------------------------------------------------------------
+ECHO FLASHING BOOT IMAGE TO BOOT PARTITION
+
+color 01
+fastboot erase boot
+fastboot flash boot boot.img
+ECHO ------------------------------------------------------------------------------------------------------
+
+timeout /T 2 /NOBREAK > nul
+
+ECHO FLASHING CACHE IMAGE TO CACHE PARTITION
+
+color 02
+fastboot erase cache
+fastboot flash cache cache.img
+ECHO ------------------------------------------------------------------------------------------------------
+
+timeout /T 2 /NOBREAK > nul
+
+ECHO FLASHING PERSIST IMAGE TO PERSIST PARTITION
+
+color 03
+fastboot erase persist
+fastboot flash persist persist.img
+ECHO ------------------------------------------------------------------------------------------------------
+
+timeout /T 2 /NOBREAK > nul
+
+ECHO FLASHING RECOVERY IMAGE TO RECOVERY PARTITION
+
+color 06
+fastboot erase recovery
+fastboot flash recovery recovery.img
+ECHO ------------------------------------------------------------------------------------------------------
+
+timeout /T 2 /NOBREAK > nul
+
+ECHO FLASHING SPLASH IMAGE TO SPLASH PARTITION
+
+color 05
+fastboot erase splash
+fastboot flash splash splash.img
+ECHO ------------------------------------------------------------------------------------------------------
+
+timeout /T 2 /NOBREAK > nul
+
+ECHO FLASHING SYSTEM IMAGE TO SYSTEM PARTITION
+
+color 06
+fastboot erase system
+fastboot flash system system.img
+ECHO ------------------------------------------------------------------------------------------------------
+
+timeout /T 2 /NOBREAK > nul
+
+ECHO FLASHING USERDATA IMAGE TO USERDATA PARTITION
+
+color 07
+fastboot erase userdata
+fastboot flash userdata userdata.img
+ECHO ------------------------------------------------------------------------------------------------------
+
+timeout /T 2 /NOBREAK > nul
+
+ECHO FLASHING VENDOR IMAGE TO VENDOR PARTITION
+
+color 08
+fastboot erase vendor
+fastboot flash vendor vendor.img
+ECHO ------------------------------------------------------------------------------------------------------
+
+timeout /T 2 /NOBREAK > nul
+
+ECHO ------------------------------------------(((FLASHING COMPLETED.)))-----------------------------------
+ECHO ------------------------------------------------------------------------------------------------------
+ECHO ----------------------------------!!!RESTARTING PHONE TO RECOVERY MODE!!!-----------------------------
+
+
+:JUMP
+
+
+adb reboot recovery
+
+@ECHO OFF
+ECHO ----------------------------!!!DO NOT TOUCH YOUR PHONE OR TRY TO DISCONNECT!!!------------------------
+ECHO !!!PLEASE WAIT!!!!!!PLEASE WAIT!!!!!!PLEASE WAIT!!!!!!PLEASE WAIT!!!!!!PLEASE WAIT!!!!PLEASE WAIT!!!
+color 0a
+
+timeout /T 7 /NOBREAK > nul
+fastboot boot recovery.img
+timeout /T 7 /NOBREAK > nul
+adb reboot recovery
+ECHO --------------------------------PHONE SUCCESSFULLY REBOOTED TO RECOVERY.------------------------------
+ECHO ---------------------------------------------BY DEFAULT-----------------------------------------------
+
+timeout /T 5 /NOBREAK > nul
+@ECHO OFF
+
+:START
+cls
+ECHO.
+ECHO -------------------------------------------------------------------------------------------------------
+ECHO --------------------------------------!!!ENTER YOUR CHOICE!!!------------------------------------------
+ECHO -------------------------------------------------------------------------------------------------------
+
+ECHO 1. -------------------------------------?REBOOT TO RECOVERY?-------------------------------------------
+ECHO 2. --------------------------------------?REBOOT TO SYSTEM?--------------------------------------------
+ECHO 3. ------------------------------------?REBOOT TO BOOTLOADER?------------------------------------------
+ECHO 4. ---------------------------------------?RE-FLASH PHONE?---------------------------------------------
+ECHO 5. -----------------------------?START PROGRAM FROM THE BEGINING?--------------------------------------
+ECHO 6. ------------------------------------?FLASH (ONE BY ONE)?--------------------------------------------
+ECHO 7. -------------------------------------?BOOT TO EDL MODE?---------------------------------------------
+ECHO 8.-------------------------------------?QUIT/EXIT PROGRAM?---------------------------------------------
+
+timeout /T 3 /NOBREAK > nul
+
+CHOICE /N /C:12345678 /M "CHOOSE AN OPTION FROM (1 TO 8)"%1
+
+IF ERRORLEVEL ==8 goto END
+IF ERRORLEVEL ==7 goto EDL
+IF ERRORLEVEL ==6 goto ONEBYONE
+IF ERRORLEVEL ==5 goto RE-START
+IF ERRORLEVEL ==4 goto RE-FLASH
+IF ERRORLEVEL ==3 goto BOOTLOADER
+IF ERRORLEVEL ==2 goto SYSTEM
+IF ERRORLEVEL ==1 goto RECOVERY1
+
+ECHO.
+goto START
+
+:RECOVERY1
+color 02
+ECHO --------------------------------------------ARE YOU SURE ?----------------------------------------------
+ECHO ---------------------------!!!!??DO YOU WANT TO RESTART YOUR PHONE??!!!!--------------------------------
+PAUSE
+ECHO --------------------------------------!!!REBOOTING TO RECOVERY!!!---------------------------------------
+
+adb reboot bootloader
+
+@ECHO OFF
+ECHO ----------------------------!!!DO NOT TOUCH YOUR PHONE OR TRY TO DISCONNECT!!!------------------------
+ECHO !!!PLEASE WAIT!!!!!!PLEASE WAIT!!!!!!PLEASE WAIT!!!!!!PLEASE WAIT!!!!!!PLEASE WAIT!!!!PLEASE WAIT!!!
+color 01
+
+
+timeout /T 7 /NOBREAK > nul
+fastboot boot recovery.img
+timeout /T 7 /NOBREAK > nul
+adb reboot recovery
+ECHO --------------------------------PHONE SUCCESSFULLY REBOOTED TO RECOVERY.------------------------------
+
+ECHO ----------------------------------------###PHONE RESTARTED###-------------------------------------------
+
+goto START
+
+:SYSTEM
+color 06
+ECHO --------------------------------------------ARE YOU SURE ?----------------------------------------------
+ECHO ---------------------------!!!!??DO YOU WANT TO RESTART YOUR PHONE??!!!!--------------------------------
+PAUSE
+ECHO ----------------------------------------!!!REBOOTING TO SYSTEM!!!---------------------------------------
+
+adb reboot bootloader
+
+@ECHO OFF
+ECHO ----------------------------!!!DO NOT TOUCH YOUR PHONE OR TRY TO DISCONNECT!!!------------------------
+ECHO !!!PLEASE WAIT!!!!!!PLEASE WAIT!!!!!!PLEASE WAIT!!!!!!PLEASE WAIT!!!!!!PLEASE WAIT!!!!PLEASE WAIT!!!
+color 0a
+timeout /T 7 /NOBREAK > nul
+fastboot boot recovery.img
+timeout /T 7 /NOBREAK > nul
+adb reboot system
+timeout /T 7 /NOBREAK > nul
+
+
+ECHO --------------------------------PHONE SUCCESSFULLY REBOOTED TO SYSTEM.------------------------------
+
+ECHO ----------------------------------------###PHONE RESTARTED###-------------------------------------------
+
+goto START
+
+:EDL
+color 06
+ECHO --------------------------------------------?ARE YOU SURE?----------------------------------------------
+ECHO ------------------------!!!!??DO YOU WANT TO RESTART YOUR PHONE TO EDL MODE??!!!!-----------------------
+PAUSE
+ECHO --------------------------------------!!!REBOOTING TO EDL MODE!!!---------------------------------------
+adb reboot bootloader
+ECHO !!!PLEASE WAIT!!!!!!PLEASE WAIT!!!!!!PLEASE WAIT!!!!!!PLEASE WAIT!!!!!!PLEASE WAIT!!!!PLEASE WAIT!!!
+timeout /T 7 /NOBREAK > nul
+ECHO !!!PLEASE WAIT!!!!!!PLEASE WAIT!!!!!!PLEASE WAIT!!!!!!PLEASE WAIT!!!!!!PLEASE WAIT!!!!PLEASE WAIT!!!
+fastboot oem edl
+timeout /T 3 /NOBREAK > nul
+ECHO -------------------------------------###PHONE STARTED TO EDL MODE###------------------------------------
+ECHO ####PLEASE DO NOT DISCONNECT YOUR DEVICE FROM YOUR COMPUTER. OTHERWISE IT WILL MAY HARM YOUR DEVICE.####
+ECHO ##############FOR FLASHING FROM EDL MODE, USE Xiaomi's OFFICIAL 'MI FLASHTOOL' INSTRAD.#################
+goto START
+
+:BOOTLOADER
+color 06
+ECHO --------------------------------------------ARE YOU SURE ?----------------------------------------------
+ECHO ---------------------------!!!!??DO YOU WANT TO RESTART YOUR PHONE??!!!!--------------------------------
+PAUSE
+ECHO --------------------------------------!!!REBOOTING TO BOOTLOADER!!!-------------------------------------
+
+
+adb reboot bootloader
+
+@ECHO OFF
+ECHO ----------------------------!!!DO NOT TOUCH YOUR PHONE OR TRY TO DISCONNECT!!!------------------------
+ECHO !!!PLEASE WAIT!!!!!!PLEASE WAIT!!!!!!PLEASE WAIT!!!!!!PLEASE WAIT!!!!!!PLEASE WAIT!!!!PLEASE WAIT!!!
+color 0a
+
+timeout /T 7 /NOBREAK > nul
+fastboot boot recovery.img
+timeout /T 7 /NOBREAK > nul
+adb reboot bootloader
+ECHO --------------------------------PHONE SUCCESSFULLY REBOOTED TO BOOTLOADER.------------------------------
+
+
+ECHO ----------------------------------------###PHONE RESTARTED###-------------------------------------------
+
+
+color 07
+ECHO 1. --------------------------------------?GO TO THE BOOT MENU?------------------------------------------
+ECHO 2.  -------------------------------------?REBOOT TO RECOVERY?-------------------------------------------
+
+CHOICE /N /C:12 /M "CHOOSE AN OPTION FROM (1 TO 2)"%1
+
+IF ERRORLEVEL ==2 goto JUMP
+IF ERRORLEVEL ==1 goto START
+
+ECHO.
+
+goto START
+
+:RE-FLASH
+color 09
+ECHO --------------------------------------------------------------------------------------------------------
+timeout /T 3 /NOBREAK > nul
+goto BEGIN
+
+:RE-START
+color 05
+ECHO --------------------------------------------------------------------------------------------------------
+timeout /T 3 /NOBREAK > nul
+goto RESTART
+
+PAUSE
+
+
+
+@ECHO OFF
+
+:ONEBYONE
+cls
+color 05
+
+ECHO -------------------------------------------------------------------------------------------------------
+ECHO --------------------------------------!!!ENTER YOUR CHOICE!!!------------------------------------------
+ECHO -------------------------------------------------------------------------------------------------------
+
+ECHO 1. --------------------------------------?FLASH BOOT.IMG?----------------------------------------------
+ECHO 2. -------------------------------------?FLASH CACHE.IMG?----------------------------------------------
+ECHO 3. ------------------------------------?FLASH PERSIST.IMG?---------------------------------------------
+ECHO 4. ------------------------------------?FLASH RECOVERY.IMG?--------------------------------------------
+ECHO 5. -------------------------------------?FLASH SPLASH.IMG?---------------------------------------------
+ECHO 6. -------------------------------------?FLASH SYSTEM.IMG?---------------------------------------------
+ECHO 7. ------------------------------------?FLASH USERDATA.IMG?--------------------------------------------
+ECHO 8. -------------------------------------?FLASH VENDOR.IMG?---------------------------------------------
+ECHO 9. ------------------------------------?GO TO RECOVERY MODE?-------------------------------------------
+ECHO 10.-----------------------------------?GO TO FULL FLASH MODE?------------------------------------------
+ECHO 11.----------------------------------?START FROM THE BEGINING?-----------------------------------------
+ECHO 12.---------------------------------------?REBOOT OPTIONS?---------------------------------------------
+ECHO 13.-------------------------------------?QUIT/EXIT PROGRAM?--------------------------------------------
+
+set choice=
+set /p choice=ENTER NOW.
+if not '%choice%'=='' set choice=%choice:~0,100%
+if '%choice%'=='1' goto BOOT
+if '%choice%'=='2' goto CACHE
+if '%choice%'=='3' goto PERSIST
+if '%choice%'=='4' goto RECOVERY
+if '%choice%'=='5' goto SPLASH
+if '%choice%'=='6' goto SYSTEM
+if '%choice%'=='7' goto USERDATA
+if '%choice%'=='8' goto VENDOR
+if '%choice%'=='9' goto RECO
+if '%choice%'=='10' goto OPTIONS
+if '%choice%'=='11' goto RE-START
+if '%choice%'=='12' goto START
+if '%choice%'=='13' goto END
+
+ECHO "%choice%" WRONG INPUT, PLEASE TRY AGAIN WITH VALID NUMBER FROM OPTIONS.
+ECHO.
+goto ONEBYONE
+
+ECHO START FLASHING ?
+PAUSE
+
+:BOOT
+color 09
+ECHO ------------------------------------------------------------------------------------------------------
+ECHO Let's FLASH
+ECHO CHECKING ADB DEVICES
+adb devices
+ECHO ------------------------------------------------------------------------------------------------------
+
+
+ECHO FLASHING BOOT IMAGE TO BOOT PARTITION ONLY.
+
+fastboot erase boot
+fastboot flash boot boot.img
+ECHO ------------------------------------------------------------------------------------------------------
+ECHO                                         FLASHING COMPLETED.
+ECHO ------------------------------------------------------------------------------------------------------
+timeout /T 3 /NOBREAK > nul
+
+color 04
+ECHO 1. -----------GO BACK TO ONE BY ONE MODE--------------
+ECHO 2.     ------------REBOOT TO RECOVERY--------------
+
+CHOICE /N /C:12 /M "CHOOSE AN OPTION FROM (1 TO 2)"%1
+
+IF ERRORLEVEL ==2 goto RECO
+IF ERRORLEVEL ==1 goto ONEBYONE
+
+
+:CACHE
+color 08
+ECHO ------------------------------------------------------------------------------------------------------
+ECHO Let's FLASH
+ECHO CHECKING ADB DEVICES
+adb devices
+ECHO ------------------------------------------------------------------------------------------------------
+
+ECHO FLASHING CACHE IMAGE TO CACHE PARTITION ONLY.
+
+fastboot erase cache
+fastboot flash cache cache.img
+ECHO ------------------------------------------------------------------------------------------------------
+ECHO                                         FLASHING COMPLETED.
+ECHO ------------------------------------------------------------------------------------------------------
+timeout /T 3 /NOBREAK > nul
+
+color 06
+ECHO 1. -------------------------------?GO BACK TO ONE BY ONE MODE?----------------------------------------
+ECHO 2. -----------------------------------?REBOOT TO RECOVERY?--------------------------------------------
+
+CHOICE /N /C:12 /M "CHOOSE AN OPTION FROM (1 TO 2)"%1
+
+IF ERRORLEVEL ==2 goto RECO
+IF ERRORLEVEL ==1 goto ONEBYONE
+
+
+:PERSIST
+color 07
+ECHO ------------------------------------------------------------------------------------------------------
+ECHO Let's FLASH
+ECHO CHECKING ADB DEVICES
+adb devices
+ECHO ------------------------------------------------------------------------------------------------------
+
+ECHO FLASHING PERSIST IMAGE TO PERSIST PARTITION ONLY.
+
+fastboot erase persist
+fastboot flash persist persist.img
+ECHO ------------------------------------------------------------------------------------------------------
+ECHO                                         FLASHING COMPLETED.
+ECHO ------------------------------------------------------------------------------------------------------
+timeout /T 3 /NOBREAK > nul
+
+color 04
+ECHO 1. -----------GO BACK TO ONE BY ONE MODE--------------
+ECHO 2.     ------------REBOOT TO RECOVERY--------------
+
+CHOICE /N /C:12 /M "CHOOSE AN OPTION FROM (1 TO 2)"%1
+
+IF ERRORLEVEL ==2 goto RECO
+IF ERRORLEVEL ==1 goto ONEBYONE
+
+
+:RECOVERY
+color 06
+ECHO ------------------------------------------------------------------------------------------------------
+ECHO Let's FLASH
+ECHO CHECKING ADB DEVICES
+adb devices
+ECHO ------------------------------------------------------------------------------------------------------
+
+ECHO FLASHING RECOVERY IMAGE TO RECOVERY PARTITION ONLY.
+
+fastboot erase recovery
+fastboot flash recovery recovery.img
+ECHO ------------------------------------------------------------------------------------------------------
+ECHO                                         FLASHING COMPLETED.
+ECHO ------------------------------------------------------------------------------------------------------
+timeout /T 3 /NOBREAK > nul
+
+color 04
+ECHO 1. -------------------------------?GO BACK TO ONE BY ONE MODE?----------------------------------------
+ECHO 2. -----------------------------------?REBOOT TO RECOVERY?--------------------------------------------
+
+CHOICE /N /C:12 /M "CHOOSE AN OPTION FROM (1 TO 2)"%1
+
+IF ERRORLEVEL ==2 goto RECO
+IF ERRORLEVEL ==1 goto ONEBYONE
+
+
+:SPLASH
+color 05
+ECHO ------------------------------------------------------------------------------------------------------
+ECHO Let's FLASH
+ECHO CHECKING ADB DEVICES
+adb devices
+ECHO ------------------------------------------------------------------------------------------------------
+
+ECHO FLASHING SPLASH IMAGE TO SPLASH PARTITION ONLY.
+
+fastboot erase splash
+fastboot flash splash splash.img
+ECHO ------------------------------------------------------------------------------------------------------
+ECHO                                         FLASHING COMPLETED.
+ECHO ------------------------------------------------------------------------------------------------------
+timeout /T 3 /NOBREAK > nul
+
+color 03
+ECHO 1. --------------------------------?GO BACK TO ONE BY ONE MODE?---------------------------------------
+ECHO 2. ------------------------------------?REBOOT TO RECOVERY?-------------------------------------------
+
+CHOICE /N /C:12 /M "CHOOSE AN OPTION FROM (1 TO 2)"%1
+
+IF ERRORLEVEL ==2 goto RECO
+IF ERRORLEVEL ==1 goto ONEBYONE
+
+
+:SYSTEM
+color 05
+ECHO ------------------------------------------------------------------------------------------------------
+ECHO Let's FLASH
+ECHO CHECKING ADB DEVICES
+adb devices
+ECHO ------------------------------------------------------------------------------------------------------
+
+ECHO FLASHING SYSTEM IMAGE TO SYSTEM PARTITION ONLY.
+
+fastboot erase system
+fastboot flash system system.img
+ECHO ------------------------------------------------------------------------------------------------------
+ECHO                                         FLASHING COMPLETED.
+ECHO ------------------------------------------------------------------------------------------------------
+timeout /T 3 /NOBREAK > nul
+
+color 07
+ECHO 1. -------------------------------?GO BACK TO ONE BY ONE MODE?----------------------------------------
+ECHO 2. -----------------------------------?REBOOT TO RECOVERY?--------------------------------------------
+
+CHOICE /N /C:12 /M "CHOOSE AN OPTION FROM (1 TO 2)"%1
+
+IF ERRORLEVEL ==2 goto RECO
+IF ERRORLEVEL ==1 goto ONEBYONE
+
+
+:USERDATA
+color 03
+ECHO ------------------------------------------------------------------------------------------------------
+ECHO Let's FLASH
+ECHO CHECKING ADB DEVICES
+adb devices
+ECHO ------------------------------------------------------------------------------------------------------
+
+ECHO FLASHING USERDATA IMAGE TO USERDATA PARTITION ONLY.
+
+fastboot erase userdata
+fastboot flash userdata userdata.img
+ECHO ------------------------------------------------------------------------------------------------------
+ECHO                                         FLASHING COMPLETED.
+ECHO ------------------------------------------------------------------------------------------------------
+timeout /T 3 /NOBREAK > nul
+
+color 03
+ECHO 1. -------------------------------?GO BACK TO ONE BY ONE MODE?----------------------------------------
+ECHO 2. -----------------------------------?REBOOT TO RECOVERY?--------------------------------------------
+
+CHOICE /N /C:12 /M "CHOOSE AN OPTION FROM (1 TO 2)"%1
+
+IF ERRORLEVEL ==2 goto RECO
+IF ERRORLEVEL ==1 goto ONEBYONE
+
+
+:VENDOR
+color 02
+ECHO ------------------------------------------------------------------------------------------------------
+ECHO Let's FLASH
+ECHO CHECKING ADB DEVICES
+adb devices
+ECHO ------------------------------------------------------------------------------------------------------
+
+ECHO FLASHING VENDOR IMAGE TO VENDOR PARTITION ONLY.
+
+fastboot erase vendor
+fastboot flash vendor vendor.img
+ECHO ------------------------------------------------------------------------------------------------------
+ECHO                                         FLASHING COMPLETED.
+ECHO ------------------------------------------------------------------------------------------------------
+timeout /T 3 /NOBREAK > nul
+
+color 07
+ECHO 1. -------------------------------?GO BACK TO ONE BY ONE MODE?----------------------------------------
+ECHO 2. -----------------------------------?REBOOT TO RECOVERY?--------------------------------------------
+
+CHOICE /N /C:12 /M "CHOOSE AN OPTION FROM (1 TO 2)"%1
+
+IF ERRORLEVEL ==2 goto RECO
+IF ERRORLEVEL ==1 goto ONEBYONE
+
+
+:RECO
+color 01
+
+adb reboot bootloader
+timeout /T 7 /NOBREAK > nul
+fastboot boot recovery.img
+@echo off
+ECHO ----------------------------!!!DO NOT TOUCH YOUR PHONE OR TRY TO DISCONNECT!!!------------------------
+ECHO !!!PLEASE WAIT!!!!!!PLEASE WAIT!!!!!!PLEASE WAIT!!!!!!PLEASE WAIT!!!!!!PLEASE WAIT!!!!PLEASE WAIT!!!
+color 0a
+timeout /T 7 /NOBREAK > nul
+adb reboot recovery
+ECHO --------------------------------PHONE SUCCESSFULLY REBOOTED TO RECOVERY.------------------------------
+ECHO ---------------------------------------------BY DEFAULT-----------------------------------------------
+goto ONEBYONE
+
+
+
+
+
+:INSTRUCTIONS
+
+ECHO -----------------------------------INSTRUCTIONS MANUAL--------------------------------------------------
+
+ECHO TO USE THIS TOOL PROPERLY, YOU HAVE TO DO SOME WORKS WHICH REQUIRES ABOUT TO MAKE THIS TOOL FULLY FUNCTIONAL.
+
+ECHO REQUIREMENTS:
+
+ECHO 1) FIRST OF ALL, YOUR DEVICE WARRANTY IS NOW GOING TO BE VOID.
+
+ECHO 2) DOWN-LOAD ALL THE NECESSARY DRIVERS. IT IS MANDATORY.
+
+ECHO 3) DOWNLOAD THE STOCK ROM FILE FROM YOUR DEVICE MAKER WEBSITE. AND UNZIP IT. AND COPY (BOOT.IMG, CACHE.IMG,
+ECHO 	PERSIST.IMG, RECOVERY.IMG, SPLASH.IMG, SYSTEM.IMG, USERDATA.IMG, VENDOR.IMG).
+
+ECHO 4) MAKE SURE YOUR PHONE'S BOOTLOADER IS UN-LOCKED. FOR UNLOCKING YOUR BOOTLOADER, GOOGLE FOR THIS PROCESS.
+ECHO    THIS PROCESS WILL VOID YOUR WARRANTY. SO BE CAREFULL.
+
+ECHO 5) TOOL'S DEVELOPER IS or WILL NOT BE LIABLE FOR YOUR BRICKED DEVICE AND ANY KIND OF DATA LOSS. BACKUP 
+ECHO    YOUR DATA FIRST.
+
+ECHO ----------------------------------DO YOU FINISHED READING?-----------------------------------------------
+PAUSE
+
+goto OPTIONS
+
+:END
+color 05
+timeout /T 5 /NOBREAK > nul
+ECHO --------------[[[[PROGRAM CLOSED]]]]-----------------------[[[[PROGRAM CLOSED]]]]----------------------
+ECHO --------------[[[[PROGRAM CLOSED]]]]-----------------------[[[[PROGRAM CLOSED]]]]----------------------
+ECHO --------------[[[[PROGRAM CLOSED]]]]-----------------------[[[[PROGRAM CLOSED]]]]----------------------
+
+
+timeout /T 3 /NOBREAK > nul
+color 04
+ECHO       --------------[[[[BYE BYE]]]]-----------------------[[[[BYE BYE]]]]----------------------
+
+timeout /T 3 /NOBREAK > nul
