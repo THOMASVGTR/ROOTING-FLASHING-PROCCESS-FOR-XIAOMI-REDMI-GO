@@ -3,7 +3,7 @@ This process will tell you how you can root your Xiaomi Redmi Go phone easily.
 AUTHOR IS NOT LIABLE FOR YOUR DEVICE BRICKING OR SOMETHING IF HAPPENS.
 Do everything at your own risk.
 
-[YOUR VALUABLE DATA WILL GOING TO BE VANISHED. SO BACKUP EVERYTHING TO YOUR COMPUTER (RECOMMENDED) OR SD CARD].
+    [YOUR VALUABLE DATA WILL GOING TO BE VANISHED. SO BACKUP EVERYTHING TO YOUR COMPUTER (RECOMMENDED) OR SD CARD].
 
 # REQUIREMENTS:
 1) A PC or LAPTOP WITH WINDOWS 10(RECOMMENDED) or UBUNTU LINUX or LINUX MINT or MACOS.
@@ -91,6 +91,7 @@ Link:  https://drive.google.com/file/d/1PJ3gwq9jtEhaeBX5a9bXY-2APf46ZsvI/view
 7) Now you have to copy some files to your C: Drives ADB folder.
    
    The files are, 
+   
                   =>boot.img
    
                   =>cache.img
@@ -113,7 +114,7 @@ LINK: https://github.com/phhusson/treble_experimentations/wiki/Generic-System-Im
 
 Download any rom like HAVOC OS or CAOS.
 
-click download button and search the ARM-AONLY version. Size should be 300mb to 500mb.
+click download button and search the  "ARM-AONLY" version. Size should be 300mb to 500mb.
 
 Note: more than 500mb will be failed to install on REDMI GO phone.
 
