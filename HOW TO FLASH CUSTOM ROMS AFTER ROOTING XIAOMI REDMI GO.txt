@@ -1,3 +1,5 @@
 # DOWNLOAD A SMALL SOFTEARE AND PLACE IT TO YOUR C: Drive's adb folder.
 
+Copy and Paste the link to your browser and click the download button.
+
 Link:  https://github.com/THOMASVGTR/ROOTING-FLASHING-PROCCESS-FOR-XIAOMI-REDMI-GO/blob/master/GSI%20FIRMWARE%20FLASHER%202.0%20(LATEST).exe
