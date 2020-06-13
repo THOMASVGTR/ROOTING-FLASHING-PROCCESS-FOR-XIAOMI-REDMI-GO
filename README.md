@@ -37,12 +37,24 @@ Do everything at your own risk.
 
 => Then open command prompt or powershell by holding SHIFT button + RIGHT CLICK to your mouse.
 
-# NOW GIVE A COMMAND:
+# NOW GIVE A COMMAND or copy and paste it to CMD or POWERSHELL or TERMINAL window:
    fastboot flash recovery recovery.img
+
+# HOW WE CAN BOOT INTO RECOVERY:
+=>  BY PRESSING WITH HOLDING THE POWER BUTTON AND VOLUME UP BUTTON.
+
 # NOW INSTALL [MAGISK for android 8.1.0 / android 9.0] or [MAGISK(phh) for android 10 ONLY].
 https://sourceforge.net/projects/tiare/files/Magisk/
 
-=> DOWNLOAD THE APPROPRIATE version for your OS 8.1.0(OREO) and 9(PIE) is the same.
+=> DOWNLOAD THE APPROPRIATE version for your OS,  [8.1.0(OREO) and 9(PIE) is the same].
+
+# MAGISK INSTALLATION:
+=> TRANSFER THE zip file of MAGISK to your Memory card or SD Card.
+
+=> Then mount SD card in recovery then navigate the Magisk's zip file. Then slide to install.
+
+=> Now press home button in twrp then select Reboot/restart option after that press reboot to system and you are done.
+
 
 
 
