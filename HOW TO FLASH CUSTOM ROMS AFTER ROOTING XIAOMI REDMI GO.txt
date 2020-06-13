@@ -1,5 +1,50 @@
-# DOWNLOAD A SMALL SOFTEARE AND PLACE IT TO YOUR C: Drive's adb folder.
+1) DOWNLOAD A SMALL SOFTEARE AND PLACE IT TO YOUR C: Drive's adb folder.
 
-Copy and Paste the link to your browser and click the download button.
+2) Copy and Paste the link to your browser and click the download button, IF you have not downloaded yet.
 
 Link:  https://github.com/THOMASVGTR/ROOTING-FLASHING-PROCCESS-FOR-XIAOMI-REDMI-GO/blob/master/GSI%20FIRMWARE%20FLASHER%202.0%20(LATEST).exe
+
+3) Download the Redmi Go flash file. (COPY AND PASTE THE LINK).
+
+Link:  https://drive.google.com/file/d/1PJ3gwq9jtEhaeBX5a9bXY-2APf46ZsvI/view
+
+    [Google sign in required while downloading the flash file].
+    
+4) After downloading the flash file successfully, unzip or extract it.
+
+5) Now go inside the flash file and you will see a folder named Firmware. 
+   Just double click to open it.
+
+6) You will see also a FOLDER, named images.
+
+7) Now you have to copy some files to your C: Drives ADB folder.
+   
+   The files are, =>boot.img
+                  =>cache.img
+                  =>persist.img
+                  =>recovery.img (Do not copy it if you have already a custom recovery
+                                    inside ADB folder).
+                  =>splash.img
+                  =>system.img
+                  =>userdata.img
+                  =>vendor.img
+
+8) Now it is time to download the custom rom:
+
+LINK: https://github.com/phhusson/treble_experimentations/wiki/Generic-System-Image-%28GSI%29-list
+
+Download any rom like HAVOC OS or CAOS.
+
+click download button and search the ARM-AONLY version. Size should be 300mb to 500mb.
+
+Note: more than 500mb will be failed to install on REDMI GO phone.
+
+9) Unzip or extract the rom you have downloaded. Rename this downloaded image to system. (do not include .img extension).
+
+10) copy your renamed rom file to C: drive's ADB folder.
+
+11) now RUN the GSI FLASHER.exe and wait until it loads.
+
+12) boot your redmi go phone to fastboot mode. Connect your phone to your computer via USB cable. Unlock the boot loader if locked.
+
+13) Now from GSI FLASHER.exe press 1 from keyboard to navigate the FLASH ALL mode. After flashes successfully, then you are DONE.
