@@ -37,11 +37,12 @@ Do everything at your own risk.
 
 => Then open command prompt or powershell by holding SHIFT button + RIGHT CLICK to your mouse.
 
-# NOW GIVE A COMMAND
+# NOW GIVE A COMMAND:
    fastboot flash recovery recovery.img
 # NOW INSTALL [MAGISK for android 8.1.0 / android 9.0] or [MAGISK(phh) for android 10 ONLY].
 https://sourceforge.net/projects/tiare/files/Magisk/
-DOWNLOAD THE APPROPRIATE version for your OS 8.1.0(OREO) and 9(PIE) is the same.
+
+=> DOWNLOAD THE APPROPRIATE version for your OS 8.1.0(OREO) and 9(PIE) is the same.
 
 
 
