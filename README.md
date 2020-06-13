@@ -56,9 +56,11 @@ https://sourceforge.net/projects/tiare/files/Magisk/
 => Now press home button in twrp then select Reboot/restart option after that press reboot to system and you are done.
 
 
+# INTERESTED in CUSTOM AFTER ROOTING?
 
+IT is very easy.
 
-
+link:  https://github.com/THOMASVGTR/ROOTING-FLASHING-PROCCESS-FOR-XIAOMI-REDMI-GO/blob/master/HOW%20TO%20FLASH%20CUSTOM%20ROMS%20AFTER%20ROOTING%20XIAOMI%20REDMI%20GO.txt
 
 
 
