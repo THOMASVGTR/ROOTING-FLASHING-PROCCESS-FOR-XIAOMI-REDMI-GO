@@ -60,11 +60,12 @@ https://sourceforge.net/projects/tiare/files/Magisk/
 
 IT is very easy.
 
+# INSTRUCTIONS: 
 link:  https://github.com/THOMASVGTR/ROOTING-FLASHING-PROCCESS-FOR-XIAOMI-REDMI-GO/blob/master/HOW%20TO%20FLASH%20CUSTOM%20ROMS%20AFTER%20ROOTING%20XIAOMI%20REDMI%20GO.txt
 
+# LINK OF THE FLASHER SOFTWARE:
+https://github.com/THOMASVGTR/ROOTING-FLASHING-PROCCESS-FOR-XIAOMI-REDMI-GO/blob/master/GSI%20FIRMWARE%20FLASHER%202.0%20(LATEST).exe
 
-
-
-
+Download it now. PLACE this software exe file to C: drive's adb folder.
 
 
