@@ -7,11 +7,15 @@ Do everything at your own risk.
 
 # REQUIREMENTS:
 1) A PC or LAPTOP WITH WINDOWS 10(RECOMMENDED) or UBUNTU LINUX or LINUX MINT or MACOS.
+
 2) UNIVERSAL ADB DRIVER INSTALLER (Download the appropriate version for your OS)
   LINK: https://www.xda-developers.com/install-adb-windows-macos-linux/
+  
 3)AN ANDROID PHONE with ANDROID USB DEBUGGING ENABLED. HOW to enable? 
   Follow the previous link, every instruction is given there.
+  
 4) NEED SOME BRAINS from your head.
+
 5) A Redmi go phone with UNLOCKED boot loader. IF bootloader is LOCKED, YOU HAVE TO UNLOCK IT.
 
 
@@ -86,14 +90,21 @@ Link:  https://drive.google.com/file/d/1PJ3gwq9jtEhaeBX5a9bXY-2APf46ZsvI/view
 
 7) Now you have to copy some files to your C: Drives ADB folder.
    
-   The files are, =>boot.img
+   The files are, 
+                  =>boot.img
+   
                   =>cache.img
+                  
                   =>persist.img
+                  
                   =>recovery.img (Do not copy it if you have already a custom recovery
                                     inside ADB folder).
                   =>splash.img
+                  
                   =>system.img
+                  
                   =>userdata.img
+                  
                   =>vendor.img
 
 8) Now it is time to download the custom rom:
