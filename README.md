@@ -126,7 +126,7 @@ Note: more than 500mb will be failed to install on REDMI GO phone.
 
 12) boot your redmi go phone to fastboot mode. Connect your phone to your computer via USB cable. Unlock the boot loader if locked.
 
-13) Now from GSI FLASHER.exe press 1 from keyboard to navigate the FLASH ALL mode. After flashes successfully, then you are DONE.
+13) Now from GSI FLASHER.exe press 1 from keyboard to navigate the FLASH ALL mode. After flashing successfully, then you are DONE.
 
 # LINK OF THE FLASHER SOFTWARE:
 https://github.com/THOMASVGTR/ROOTING-FLASHING-PROCCESS-FOR-XIAOMI-REDMI-GO/blob/master/GSI%20FIRMWARE%20FLASHER%202.0%20(LATEST).exe
@@ -134,4 +134,23 @@ https://github.com/THOMASVGTR/ROOTING-FLASHING-PROCCESS-FOR-XIAOMI-REDMI-GO/blob
 Download it now. PLACE this software exe file to C: drive's adb folder.
 
  # NOW ENJOY YOUR NEW ROM.
+
+
+# BOOTLOOPS (STUCK ON LOGO) ISSUES:
+
+=> After passing 4 to 5 minutes and your phone still booting or stuck at the logo, then you have to go to the recovery mode by pressing power button and volume up key.
+
+=> Now you have to flash 2 (two) more zips. 1)Permissiver_v5.zip 
+                                            2)decrypt.zip
+                                            3)Boot animation replacer.zip
+
+# Permissiver.zip
+
+
+
+# Decrypt.zip
+
+
+# Boot Animation Replacer.zip
+
 
