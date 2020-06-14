@@ -61,6 +61,10 @@ https://sourceforge.net/projects/tiare/files/Magisk/
 
 => Now press home button in twrp then select Reboot/restart option after that press reboot to system and you are done.
 
+# GAPPS INSTALLATION:
+
+    FLASH THIS GAPPS PACKAGE VIA MAGISK MANAGER.
+LINK :  https://drive.google.com/file/d/1vEFnqRRl9e9GFw-NGezF2-b3R0T8gp_Q/view?usp=sharing
 
 # INTERESTED in CUSTOM ROM AFTER ROOTING?
 
