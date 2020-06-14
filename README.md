@@ -66,6 +66,14 @@ https://sourceforge.net/projects/tiare/files/Magisk/
     FLASH THIS GAPPS PACKAGE VIA MAGISK MANAGER.
 LINK :  https://drive.google.com/file/d/1vEFnqRRl9e9GFw-NGezF2-b3R0T8gp_Q/view?usp=sharing
 
+# KEY LAYOUT PATCH: (RECENT BUTTON FIX)
+
+DOWNLOAD SYSTEMLESS KEYLAYOUT PATCHER.zip,
+
+FROM THIS LINK.
+
+LINK :  https://github.com/THOMASVGTR/All-Pre-Build-Zipped-MODULE-Files
+
 # INTERESTED in CUSTOM ROM AFTER ROOTING?
 
 IT is very easy.
