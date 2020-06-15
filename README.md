@@ -80,6 +80,11 @@ LINK :  https://github.com/THOMASVGTR/All-Pre-Build-Zipped-MODULE-Files
 
 IT is very easy.
 
+# LINK OF THE GSI FLASHER SOFTWARE:
+https://github.com/THOMASVGTR/ROOTING-FLASHING-PROCCESS-FOR-XIAOMI-REDMI-GO/blob/master/GSI%20FIRMWARE%20FLASHER%202.0%20(LATEST).exe
+
+Download it now. PLACE this software exe file to C: drive's adb folder.
+
 # INSTRUCTIONS: 
 link:  https://github.com/THOMASVGTR/ROOTING-FLASHING-PROCCESS-FOR-XIAOMI-REDMI-GO/blob/master/HOW%20TO%20FLASH%20CUSTOM%20ROMS%20AFTER%20ROOTING%20XIAOMI%20REDMI%20GO.txt
 
@@ -142,12 +147,7 @@ Note: more than 500mb will be failed to install on REDMI GO phone.
 
 13) Now from GSI FLASHER.exe press 1 from keyboard to navigate the FLASH ALL mode. After flashing successfully, then you are DONE.
 
-# LINK OF THE FLASHER SOFTWARE:
-https://github.com/THOMASVGTR/ROOTING-FLASHING-PROCCESS-FOR-XIAOMI-REDMI-GO/blob/master/GSI%20FIRMWARE%20FLASHER%202.0%20(LATEST).exe
 
-Download it now. PLACE this software exe file to C: drive's adb folder.
-
- # NOW ENJOY YOUR NEW ROM.
 
 
 # BOOTLOOPS (STUCK ON LOGO) ISSUES:
@@ -189,3 +189,4 @@ Thank YOU SO MUCH.
 
 ...ENJOY...
 
+# NOW ENJOY YOUR NEW ROM.
