@@ -37,7 +37,7 @@ Do everything at your own risk.
     FASTBOOT mode.
 
 => Download recommended custom recovery (TWRP) for your XIAOMI REDMI GO device.
-  Link: https://sourceforge.net/projects/tiare/files/Custom%20Recovery/TWRP/
+  Link: https://drive.google.com/drive/folders/18xk2jXtqRiimnxHTRwKKIaMtYJ5NnhYb?usp=sharing
 
 => Place this recovery.img to your computers C: drive's adb folder. Do not CLOSE or minimize the opened ADB window. 
 
@@ -140,6 +140,10 @@ Note: more than 500mb will be failed to install on REDMI GO phone.
 9) Unzip or extract the rom you have downloaded. Rename this downloaded image to system. (do not include .img extension).
 
 10) copy your renamed rom file to C: drive's ADB folder.
+
+11) You have to replace all files from that link also, Which is given below:
+
+LINK :  https://drive.google.com/drive/folders/18xk2jXtqRiimnxHTRwKKIaMtYJ5NnhYb?usp=sharing
 
 11) now RUN the GSI FLASHER.exe and wait until it loads.
 
