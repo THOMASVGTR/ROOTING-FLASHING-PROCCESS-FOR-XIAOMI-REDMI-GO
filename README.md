@@ -145,11 +145,11 @@ Note: more than 500mb will be failed to install on REDMI GO phone.
 
 LINK :  https://drive.google.com/drive/folders/18xk2jXtqRiimnxHTRwKKIaMtYJ5NnhYb?usp=sharing
 
-11) now RUN the GSI FLASHER.exe and wait until it loads.
+12) now RUN the GSI FLASHER.exe and wait until it loads.
 
-12) boot your redmi go phone to fastboot mode. Connect your phone to your computer via USB cable. Unlock the boot loader if locked.
+13) boot your redmi go phone to fastboot mode. Connect your phone to your computer via USB cable. Unlock the boot loader if locked.
 
-13) Now from GSI FLASHER.exe press 1 from keyboard to navigate the FLASH ALL mode. After flashing successfully, then you are DONE.
+14) Now from GSI FLASHER.exe press 1 from keyboard to navigate the FLASH ALL mode. After flashing successfully, then you are DONE.
 
 
 
@@ -194,3 +194,6 @@ Thank YOU SO MUCH.
 ...ENJOY...
 
 # NOW ENJOY YOUR NEW ROM.
+
+# IF YOU WANT TO GO BACK TO YOUR STOCK ROM, JUST REPLACE THOSE FILES (WHICH IS ON YOUR ADB FOLDER)  WITH YOUR STOCK FIRMWARE FILES.
+# NOW USE MY GSI FLASHER TOOL TO FLASH STOCK ROM.
