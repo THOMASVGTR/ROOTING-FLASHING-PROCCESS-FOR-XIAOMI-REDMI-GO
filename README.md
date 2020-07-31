@@ -36,7 +36,7 @@ Do everything at your own risk.
 => BOOT your Redmi go phone to FASTBOOT mode by holding power button and volume down button at the same time until it boots into the 
     FASTBOOT mode.
 
-=> Download recommended custom recovery (TWRP) for your XIAOMI REDMI GO device.
+=> Download recommended custom recovery (TWRP) or OrangeFOX for your XIAOMI REDMI GO device.
   Link: https://drive.google.com/drive/folders/18xk2jXtqRiimnxHTRwKKIaMtYJ5NnhYb?usp=sharing
 
 => Place this recovery.img to your computers C: drive's adb folder. Do not CLOSE or minimize the opened ADB window. 
